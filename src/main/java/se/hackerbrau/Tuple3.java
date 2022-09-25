@@ -1,11 +1,11 @@
 package se.hackerbrau;
 
-public class Tuple<T, T1, T2> {
+public class Tuple3<T, T1, T2> {
     T fst;
     T1 snd;
     T2 srd;
 
-    public Tuple(T fst, T1 snd, T2 srd) {
+    public Tuple3(T fst, T1 snd, T2 srd) {
         this.fst = fst;
         this.snd = snd;
         this.srd = srd;
