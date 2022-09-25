@@ -96,7 +96,7 @@ public class ChannelVoice extends JPanel {
             "Jungle Tune");
     List<Tuple3<Integer,String, Integer>> voiceTuples =
             Arrays.asList(// Piano
-                    new Tuple3<>(0,"Piano 1", 0), // new Tuple3<>(0,"Piano 1w", 8), new Tuple3<>(0, "Piano 1d", 16),
+                    new Tuple3<>(0,"Piano 1", 0), // new Tuple3<>(0,"Piano 1w", 8), new Tuple3<>(0, "Piano 1d", 16), new Tuple3<>(0,"Acou Piano1",127),
                     new Tuple3<>(1, "Piano 2", 0), // new Tuple3<>(1, "Piano 2w", 8),
                     new Tuple3<>(2, "Piano 3", 0), // new Tuple3<>(2, "Piano 3w", 8),
                     new Tuple3<>(3, "Honky-tonk", 0), // new Tuple3<>(3, "Honky-tonk w", 8),
@@ -123,7 +123,7 @@ public class ChannelVoice extends JPanel {
                     new Tuple3<>(22,"Harmonica", 0),
                     new Tuple3<>(23, "Bandeon", 0),
                     // Guitar
-                    new Tuple3<>(24, "Nylon-str. Gt.", 0), // new Tuple3<>(24,"Ukulele", 8), new Tuple3<>(24,"Nylon Gt.o", 16), new Tuple3<>(24,"Nylon Gt.2", 32),
+                    new Tuple3<>(24, "Nylon-str. Gt.", 0), new Tuple3<>(24,"Ukulele", 8), new Tuple3<>(24,"Nylon Gt.o", 16), new Tuple3<>(24,"Nylon Gt.2", 32),
                     new Tuple3<>(25,"Steel-str. Gt.", 0), // new Tuple3<>(25,"12-str.Gt.", 8), new Tuple3<>(25,"Mandolin", 16),
                     new Tuple3<>(26,"Jazz Gt.", 0), // new Tuple3<>(26,"Hawaiian Gt.", 8),
                     new Tuple3<>(27,"Clean Gt.", 0), // new Tuple3<>(27,"Chorus Gt.", 8),
@@ -166,7 +166,79 @@ public class ChannelVoice extends JPanel {
                     new Tuple3<>(60,"French Horn",0), // new Tuple3<>(60,"Fr.Horn 2",1),
                     new Tuple3<>(61,"Brass 1",0), // new Tuple3<>(61,"Brass 2",8),
                     new Tuple3<>(62,"Synth Brass 1",0), // new Tuple3<>(62,"Synth Brass 3",8), new Tuple3<>(62,"Analog Brass",16),
-                    new Tuple3<>(63,"Synth Brass 2",0) // new Tuple3<>(63 ,"Synth Brass 4",8), new Tuple3<>(63, "Analog Brass2",16)
+                    new Tuple3<>(63,"Synth Brass 2",0), // new Tuple3<>(63 ,"Synth Brass 4",8), new Tuple3<>(63, "Analog Brass2",16)
+                    // Reed
+                    new Tuple3<>(64,"Soprano Sax",0),
+                    new Tuple3<>(65,"Alto Sax",0),
+                    new Tuple3<>(66,"Tenor Sax",0),
+                    new Tuple3<>(67,"BaritoneSax",0),
+                    new Tuple3<>(68,"Oboe",0),
+                    new Tuple3<>(69,"EnglishHorn",0),
+                    new Tuple3<>(70,"Bassoon",0),
+                    new Tuple3<>(71,"Clarinet",0),
+                    // Pipe
+                    new Tuple3<>(72,"Piccolo",0),
+                    new Tuple3<>(73,"Flute",0),
+                    new Tuple3<>(74,"Recorder",0),
+                    new Tuple3<>(75,"Pan Flute",0),
+                    new Tuple3<>(76,"Bottle Blow",0),
+                    new Tuple3<>(77,"Shakuhachi",0),
+                    new Tuple3<>(78,"Whistle",0),
+                    new Tuple3<>(79,"Ocarina",0),
+                    // Synth lead
+                    new Tuple3<>(80,"Square Wave",0), // new Tuple3<>(80,"Square",1), new Tuple3<>(80,"Sine Wave",8),
+                    new Tuple3<>(81,"Saw Wave",0), // new Tuple3<>(81,"Saw",1), new Tuple3<>(81,"Doctor Solo",8),
+                    new Tuple3<>(82,"Syn. Calliope",0),
+                    new Tuple3<>(83,"ChifferLead",0),
+                    new Tuple3<>(84,"Charang",0),
+                    new Tuple3<>(85,"Solo Vox",0),
+                    new Tuple3<>(86,"5th Saw Wave",0),
+                    new Tuple3<>(87,"Bass & Lead",0),
+                    // Synth pad, etc.
+                    new Tuple3<>(88,"Fantasia",0),
+                    new Tuple3<>(89,"Warm Pad",0),
+                    new Tuple3<>(90,"Polysynth",0),
+                    new Tuple3<>(91,"Space Voice",0),
+                    new Tuple3<>(92,"Bowed Glass",0),
+                    new Tuple3<>(93,"Metal Pad",0),
+                    new Tuple3<>(94,"Halo Pad",0),
+                    new Tuple3<>(95,"Sweep Pad",0),
+                    // Synth SFX
+                    new Tuple3<>(96,"Ice Rain",0),
+                    new Tuple3<>(97,"Soundtrack",0),
+                    new Tuple3<>(98,"Crystal",0), // new Tuple3<>(98,"Syn Mallet",1),
+                    new Tuple3<>(99,"Atmosphere",0),
+                    new Tuple3<>(100,"Brightness",0),
+                    new Tuple3<>(101,"Goblin",0),
+                    new Tuple3<>(102,"Echo Drops",0), //new Tuple3<>(102,"Echo Bell",1), new Tuple3<>(102,"Echo Pan",2),
+                    new Tuple3<>(103,"Star Theme",0),
+                    // Ethnic, etc.
+                    new Tuple3<>(104,"Sitar",0), // new Tuple3<>(104,"Sitar 2",1),
+                    new Tuple3<>(105,"Banjo",0),
+                    new Tuple3<>(106,"Shamisen",0),
+                    new Tuple3<>(107,"Koto",0), // new Tuple3<>(107,"Taisho Koto",8),
+                    new Tuple3<>(108,"Kalimba",0),
+                    new Tuple3<>(109,"Bag pipe",0),
+                    new Tuple3<>(110,"Fiddle",0),
+                    new Tuple3<>(111,"Shanai",0),
+                    // Percussive
+                    new Tuple3<>(112,"Tinkle Bell",0),
+                    new Tuple3<>(113,"Agogo",0),
+                    new Tuple3<>(114,"Steel Drums",0),
+                    new Tuple3<>(115,"Woodblock",0), // new Tuple3<>(115,"Castanets",8),
+                    new Tuple3<>(116,"Taiko",0), // new Tuple3<>(116,"Concert BD",8),
+                    new Tuple3<>(117 ,"Melo Tom 1",0), // new Tuple3<>(117,"Melo Tom 2",8),
+                    new Tuple3<>(118, "Synth drum",0), // new Tuple3<>(118,"808 Tom",8), new Tuple3<>(118,"Elec Perc",9),
+                    new Tuple3<>(119,"Reverse Cym.",0),
+                    // SFX
+                    new Tuple3<>(120,"Gt.FretNoise",0), // new Tuple3<>(120,"Gt.CutNoise",1), new Tuple3<>(120,"String Slap",2),
+                    new Tuple3<>(121,"BreathNoise",0), // new Tuple3<>(121,"Fl.KeyClick",1),
+                    new Tuple3<>(122,"Seashore",0), // new Tuple3<>(122,"Rain",1), new Tuple3<>(122,"Thunder",2), new Tuple3<>(122,"Wind",3), new Tuple3<>(122,"Stream",4), new Tuple3<>(122,"Bubble",5),
+                    new Tuple3<>(123,"Bird",0), // new Tuple3<>(123,"Dog",1), new Tuple3<>(123,"Horse-Gallop",2), new Tuple3<>(123,"Bird 2",3),
+                    new Tuple3<>(124,"Telephone 1",0), // new Tuple3<>(124,"Telephone 2",1), new Tuple3<>(124,"Door Creaking",2), new Tuple3<>(124,"Door",3), new Tuple3<>(124,"Scratch",4), new Tuple3<>(124,"Windchime",5),
+                    new Tuple3<>(125,"Helicopter",0), // new Tuple3<>(125,"Car-Engine",1), new Tuple3<>(125,"Car-Stop",2), new Tuple3<>(125,"Car-Pass",3), new Tuple3<>(125,"Car-Crash",4), new Tuple3<>(125,"Siren",5), new Tuple3<>(125,"Train",6), new Tuple3<>(125,"Jetplane",7), new Tuple3<>(125,"Starship",8), new Tuple3<>(125,"Burst Noise",9),
+                    new Tuple3<>(126,"Applause",0), // new Tuple3<>(126,"Laughing",1), new Tuple3<>(126,"Screaming",2), new Tuple3<>(126,"Punch",3), new Tuple3<>(126,"Heart Beat",4), new Tuple3<>(126,"Footsteps",5),
+                    new Tuple3<>(127,"Gun Shot",0) //new Tuple3<>(127,"Machine Gun",1), new Tuple3<>(127,"Lasergun",2), new Tuple3<>(127,"Explosion",3)
             );
     List<String> voiceNames = voiceTuples.stream().map(Tuple3::getSnd).collect(Collectors.toList());
     Map<String,Integer> voiceNumber =
