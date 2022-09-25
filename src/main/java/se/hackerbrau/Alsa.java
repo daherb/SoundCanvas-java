@@ -77,11 +77,11 @@ public class Alsa {
 
         public void changeVoice(int channel, int voice, int cc) {
             try {
-//                ShortMessage ccMessage = new ShortMessage(ShortMessage.CONTROL_CHANGE, channel, 0, cc);
-//                sendMessage(ccMessage);
+                ShortMessage ccMessage = new ShortMessage(ShortMessage.CONTROL_CHANGE, channel, 0, cc);
+                sendMessage(ccMessage);
 //                flushMessages();
-//                ccMessage = new ShortMessage(ShortMessage.CONTROL_CHANGE, channel, 32, 0);
-//                sendMessage(ccMessage);
+                ccMessage = new ShortMessage(ShortMessage.CONTROL_CHANGE, channel, 32, 0);
+                sendMessage(ccMessage);
 //                flushMessages();
                 ShortMessage updateMessage = new ShortMessage(ShortMessage.PROGRAM_CHANGE, channel, voice,0);
                 sendMessage(updateMessage);
@@ -151,7 +151,7 @@ public class Alsa {
             }
             OutputStream os = outputProcess.getOutputStream();
             os.write(buffer);
-            os.flush();
+            //os.flush();
         }
 
         private void flushMessages() throws IOException {
