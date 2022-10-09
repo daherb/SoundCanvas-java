@@ -241,6 +241,7 @@ public class ChannelVoice extends JPanel {
                     new Tuple3<>(126,"Applause",0), // new Tuple3<>(126,"Laughing",1), new Tuple3<>(126,"Screaming",2), new Tuple3<>(126,"Punch",3), new Tuple3<>(126,"Heart Beat",4), new Tuple3<>(126,"Footsteps",5),
                     new Tuple3<>(127,"Gun Shot",0) //new Tuple3<>(127,"Machine Gun",1), new Tuple3<>(127,"Lasergun",2), new Tuple3<>(127,"Explosion",3)
             );
+
     List<String> voiceNames = voiceTuples.stream().map(Tuple3::getSnd).collect(Collectors.toList());
     Map<String,Integer> voiceNumber =
             Map.ofEntries(voiceTuples.stream().map((t) -> Map.entry(t.snd,t.fst)).collect(Collectors.toList()).toArray(new Map.Entry[0]));

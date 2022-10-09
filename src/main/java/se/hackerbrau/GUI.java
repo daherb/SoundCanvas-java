@@ -18,7 +18,10 @@ public class GUI extends JFrame {
         this.setLayout(layout);
         JPanel voices = new JPanel(new GridLayout(16,2));
         for (int i = 1 ; i <= 16; i++) {
-            voices.add(new ChannelVoice(this, i));
+            if (i == 10)
+                voices.add(new DrumVoice(this,i));
+            else
+                voices.add(new ChannelVoice(this, i));
         }
         JPanel midi = new JPanel(new GridLayout(2,4));
         List<String> inputs = Alsa.getInputDevices();
