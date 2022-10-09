@@ -94,6 +94,7 @@ public class ChannelVoice extends JPanel {
             "OneNote Jam",
             "Water Bell",
             "Jungle Tune");
+    // Format: voice number, voice name, voice variant (bank switching parameter)
     List<Tuple3<Integer,String, Integer>> voiceTuples =
             Arrays.asList(// Piano
                     new Tuple3<>(0,"Piano 1", 0), // new Tuple3<>(0,"Piano 1w", 8), new Tuple3<>(0, "Piano 1d", 16), new Tuple3<>(0,"Acou Piano1",127),
